@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+}
+
+
+/*----------- Navigation Bar -------------*/
+.nav-menu {
+    padding: 25px;
+
+}
+
+.menu {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #dbc1ac;
+    transition: all .4s;
+
+}
+
+.menu:hover {
+    color: slateblue;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+/*----------- End of Navigation Bar -------------*/
+
+
+/*----------Header Section ---------*/
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+        url(img/image2.jpeg) no-repeat center center/cover;
+}
+
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.heading {
+    animation-name: slide;
+    animation-duration: 1s;
+
+}
+
+.main {
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*----------End of Header Section ---------*/
+
+/*----------Adopt Section ---------*/
+#adopt {
+    background: black;
+    margin-top: 30px;
+    color: #dbc1ac;
+}
+
+.text {
+    font-size: 15px;
+
+}
+
+.about-images {
+    position: relative;
+
+}
+
+.about-img {
+    position: absolute;
+    width: 150px;
+    transition: all 2s ease;
+    opacity: 0.9;
+}
+
+.img-1 {
+    left: 0%;
+    top: 0%;
+
+}
+
+.img-2 {
+    left: 20%;
+    top: 20%;
+    z-index: 10;
+
+}
+
+.img-3 {
+    left: 40%;
+    top: 45%;
+    z-index: 20;
+}
+
+.img-4 {
+    left: 40%;
+    top: 0%;
+}
+
+.img-5 {
+    left: 0%;
+    top: 45%;
+}
+
+.about-img:hover {
+    outline: 10px solid #dbc1ac;
+    outline-offset: 32px;
+    transform: scale(1.3) rotate(20deg);
+    z-index: 30;
+    opacity: 1;
+
+}
+
+.about-images:hover,
+.about-img:not(:hover) {
+    opacity: 0.5;
+}
+
+.btn {
+    color: #dbc1ac;
+    font-weight: bold;
+    border: 2px solid blueviolet;
+    font-size: 25px;
+}
+
+.hvr-right {
+    display: inline-block;
+    vertical-align: middle;
+    transition-duration: 0.5s;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0);
+    position: relative;
+    transition-property: color;
+}
+
+.hvr-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #dbc1ac;
+    transition-timing-function: ease-out;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.hvr-right:hover,
+.hvr-right:focus,
+.hvr-right:active {
+    color: black;
+}
+
+.hvr-right:hover:before,
+.hvr-right:focus:before,
+.hvr-right:active:before {
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transform: scaleX(1);
+}
+
+/*----------End of Adopt Section ---------*/
+
+/*---------- Donate Section ---------*/
+.content-4 .nav-tabs {
+    margin: 2px;
+    border: none;
+    border-bottom: 0px;
+    text-align: center;
+    cursor: pointer;
+    background: black;
+
+}
+
+.content-4 .tab-item {
+    text-decoration: none;
+    color: #dbc1ac;
+
+}
+
+.content-4 .tab-item i {
+    display: block;
+    font-size: 45px;
+    padding: 0.4em 1.7em 0em 1.7em;
+}
+
+.content-4 .tab-item span {
+    display: inline-block;
+    padding-bottom: 16px;
+    width: 100%;
+}
+
+.content-4 .tab-item.active {
+    color: purple;
+}
+
+.tab-content {
+    margin-bottom: 5%;
+    transition: all .4s ease;
+}
+
+
+
+/*----------End of Donate Section ---------*/

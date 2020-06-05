@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PetMe </title>
+
+    <!-- Bootstrap CSS, GGoogle font, Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/043a87e592.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-------Header ------->
+<header>
+    <!-------------- Navbar ---------->
+    <nav class="navbar navbar-expand-lg fixed-top nav-menu">
+        <a href="#"> Logo </a>
+        <!--- <a class="navbar-brand" href="index.html"><img src=""> Logo</a>  -->
+        <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#navbar">
+            <div class="bg-light bar1"></div>
+            <div class="bg-light bar2"></div>
+            <div class="bg-light bar3"></div>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 menu"> Adopt </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 menu"> Donate </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 menu"> About </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 menu"> Contact </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 menu"> Sign in/Login </a>
+                </li>
+            </ul>
+
+
+        </div>
+    </nav>
+    <!------------------ End of Navbar ---------------->
+
+    <!---------- Banner ---------->
+    <div class="text-light text-right banner">
+        <h1 class="display-4 text-center font-weight-bold heading"> PetMe </h1>
+        <p class="main text-center"> Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+    </div>
+    <!----- End of Banner ---->
+</header>
+<!----- End of Header ---->
+
+
+
+<body data-spy="scroll" data-target="#navbarResponsive">
+
+
+    <!-------- Start Adopt Section ---------->
+    <section id="adopt" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 my-4">
+                    <h1 class="text-uppercase title-text display-3"> Looking for a Buddy? </h1>
+                    <p class="text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam aspernatur
+                        excepturi
+                        eaque magni sed, nisi at ab? Optio ut sit architecto voluptates.</p>
+                    <a href="#" class="btn hvr-right my-4 text-capitalize">
+                        GET STARTED
+                    </a>
+                </div>
+                <div class="col-md-6 adopt-images my-4 d-none d-lg-block">
+                    <img src="img/image1.jpeg" alt="" class="img-1 img-thumbnail about-img">
+                    <img src="img/image2.jpeg" alt="" class="img-2 img-thumbnail about-img">
+                    <img src="img/image3.jpeg" alt="" class="img-3 img-thumbnail about-img">
+                    <img src="img/image4.jpeg" alt="" class="img-4 img-thumbnail about-img">
+                    <img src="img/image5.jpg" alt="" class="img-5 img-thumbnail about-img">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------- End of Adopt Section ---------->
+
+
+    <!--------  Donate Section ---------->
+    <section class="my-50">
+        <div class="container">
+            <div class="content-4">
+                <ul class="nav" role="tablist">
+
+                    <li class="nav-item nav-tabs">
+                        <a href="#donate" class="active tab-item" role="tab" data-toggle="tab">
+                            <i class=""></i>
+                            <span> Donate </span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-tabs">
+                        <a href="#donate1" class="active tab-item" role="tab" data-toggle="tab">
+                            <i class=""></i>
+                            <span> Donate 1 </span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-tabs">
+                        <a href="#donate2" class="active tab-item" role="tab" data-toggle="tab">
+                            <i class=""></i>
+                            <span> Donate 2 </span>
+                        </a>
+                    </li>
+                    <li class="nav-item nav-tabs">
+                        <a href="#donate3" class="active tab-item" role="tab" data-toggle="tab">
+                            <i class=""></i>
+                            <span> Donate 3 </span>
+                        </a>
+                    </li>
+                </ul>
+                <!----Tabs ----->
+                <div class="tab-content">
+                    <div class="active tab-pane" role="tab-panel" id="donate">
+                        <div class="row justify-content-md-center">
+                            <div class="col-md-3 offset-md-1">
+                                <h4> Donations </h4>
+                            </div>
+                            <div class="col-md-7">
+                                <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem labore similique qui
+                                    molestiae est harum
+                                    sunt soluta nihil consequuntur a alias, nam, quibusdam necessitatibus ipsum suscipit
+                                    aut
+                                    quas, praesentium tempore?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="donate1">
+                        <div class="row justify-content-md-center">
+                            <div class="col-md-3 offset-md-1">
+                                <h4> Donations 1 </h4>
+                            </div>
+                            <div class="col-md-4">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis doloribus, magni
+                                    eius
+                                    est laudantium aliquid mollitia, adipisci, aliquam sint animi in ipsa ex quibusdam!
+                                    Corporis dignissimos ullam dicta neque odio?</p>
+                            </div>
+                            <div class="col-md-4">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit reiciendis
+                                    quaerat rerum, dolor iste nam necessitatibus sapiente vero omnis beatae aspernatur
+                                    assumenda id laborum. Omnis reiciendis eveniet similique enim explicabo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="donate2">
+                        <div class="row justify-content-md-center">
+                            <div class="col-md-3 offset-md-1">
+                                <h4> Donations 2 </h4>
+                            </div>
+                            <div class="row pt-3">
+                                <div class="col-md-10 offset-md-1">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam adipisci rem
+                                        tempora
+                                        quos sapiente sit fugit beatae quaerat. Nulla voluptates deserunt et aliquid
+                                        veritatis dolorem libero, tenetur culpa aperiam modi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------- End of Donate Section ---------->
+
+
+    <!-------- About Section ---------->
+
+    <!-------- End of About Section ---------->
+
+
+
+
+    <!-------- Contact Section ---------->
+
+    <!-------- End of Contact Section ---------->
+
+
+
+
+    <!-------- Login Section ---------->
+
+    <!-------- End of Login Section ---------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---  <script src="./petview.js"></script>  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
