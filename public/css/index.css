@@ -1,0 +1,105 @@
+.getbuddytxt {
+    text-align: left;
+    padding-left: 20%;
+    color: white;
+}
+
+.petmetxt {
+    text-align: center;
+    padding-right: 16%;
+    font-size: 60px;
+    padding-bottom: 5%;
+    color: beige;
+}
+
+.searchform {
+    padding: 15px;
+}
+
+.page-holder {
+    min-height: 100vh;
+}
+
+html,
+body,  
+.bg-cover {
+    height: 100%;
+    background-image: url('/images/dog.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+@media (max-width: 740px) {
+    html,
+    body,  
+    .bg-cover {
+        height: 1000px;
+        background-image: url('/images/dog.jpg'); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    html,
+    body,  
+    .bg-cover {
+        height: 1000px;
+        background-image: url('/images/dog.jpg'); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;   
+    }
+}
+
+  .navbar {
+    background: rgba(0, 0, 0, 0.6) !important;
+  }
+  
+  @media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+      background: rgba(0, 0, 0, 0.6) !important;
+    }
+  }
+
+  .navbar-toggler {
+      border: 1px solid white !important;
+  }
+
+  .navbar-toggler:hover {
+    border: 2px solid white !important;
+    opacity: 0.5;
+}
+
+  .navbar-toggler-icon {
+      color: white !important;
+  }
+  
+
+.rgba-gradient {
+    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.342), rgba(144, 15, 15, 0.05) 100%);
+    background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+  }
+
+#nav-text {
+    color: white;
+}
+
+#nav-text:active {
+    font-weight: bolder;
+    opacity: 0.5;
+}
+
+#nav-text:focus {
+    font-weight: bolder;
+    opacity: 0.5;
+}
+
+#nav-text:hover {
+    font-weight: bolder;
+    opacity: 0.5;
+}
+
