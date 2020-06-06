@@ -1,12 +1,12 @@
 .getbuddytxt {
     text-align: left;
-    padding-left: 20%;
+    padding-left: 10%;
     color: white;
 }
 
 .petmetxt {
-    text-align: center;
-    padding-right: 16%;
+    text-align: left;
+    padding-left: 20%;
     font-size: 60px;
     padding-bottom: 5%;
     color: beige;
@@ -101,5 +101,30 @@ body,
 #nav-text:hover {
     font-weight: bolder;
     opacity: 0.5;
+}
+
+#age, #petType, #milesrange {
+    width:200px;
+    background-color: white;
+}
+
+#age:hover, #petType:hover, #milesrange:hover {
+    width:200px;
+    background-color: white;
+    border: 2px rgb(0, 140, 255) solid;
+}
+
+#age:focus, #petType:focus, #milesrange:focus {
+    width:200px;
+    background-color: white;
+    border: 2px rgb(0, 255, 34) solid;
+}
+
+#breed:hover, #zipcode:hover {
+    border: 2px rgb(0, 140, 255) solid;
+}
+
+#breed:focus, #zipcode:focus {
+    border: 2px rgb(0, 255, 34) solid;
 }
 
