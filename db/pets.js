@@ -1,11 +1,23 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
     var Pets = sequelize.define("Pets", {
-      pet_type: DataTypes.STRING,
-      age: DataTypes.STRING,
-      breed: DataTypes.STRING,
-      zip_code: DataTypes.STRING,
-      pet_name: DataTypes.STRING,
-      image: DataTypes.BLOB('long')
+        pet_type: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        age: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        breed: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        zip_code: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        pet_name: DataTypes.STRING,
+        image: DataTypes.BLOB('long')
     });
     return Pets;
-  };
+};
