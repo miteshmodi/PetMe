@@ -1,0 +1,82 @@
+<!--- <style media="screen">
+    body {
+        color: black;
+        background-size: cover;
+        background: url("image4.jpeg");
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 50%;
+        font-family: sans-serif;
+    }
+
+    .register {
+        background: rgba(44, 62, 80, 0.7);
+        padding: 40px;
+        width: 250px;
+        height: 4309px;
+        margin-top: 90px;
+        margin-left: 180px;
+        margin: auto;
+    }
+
+    form {
+        width: 240px;
+        text-align: center;
+    }
+
+    input {
+        width: 240px;
+        text-align: center;
+        background: white;
+        border: purple;
+        border-bottom: 1px;
+        font-size: 16px;
+        font-weight: 200px;
+        padding: 10px 0;
+        transition: border 0.5s;
+        outline: purple;
+    }
+
+    input[type=button] {
+        border: black;
+        width: 190px;
+        background: white;
+        font-size: 16px;
+        line-height: 25px;
+        padding: 10px 0;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    input[type=button]:hover {
+        background: purple
+    }
+</style>  -->
+
+
+<h1> Register </h1>
+
+
+<form action="/register" method="POST"></form>
+
+<div class="register">
+
+    <div>
+        <label for="name" style="color: purple"> Name </label>
+        <input type=" text" id="name" placeholder="Name" name="name" required>
+    </div> <br><br>
+    <div>
+        <label for="email"> Email </label>
+        <input type="email" id="email" placeholder="Enter a valid Email" name="email" required>
+    </div> <br><br>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" name="password" required>
+    </div><br><br>
+
+    <button type="submit"> Register </button>
+    <!----   <input type="button" value="Register"><br> <br>
+        ---- <div id="msg"> Congratulations! you have registered successfully!!!
+            </div> -->
+    </form>
+    <button type="submit"><a href="/login"> Login </a></button>
