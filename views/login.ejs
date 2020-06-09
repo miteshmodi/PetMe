@@ -5,16 +5,76 @@
 <%= messages.error %>
 <% } %>
 
+
+<style media="screen">
+    body {
+        color: black;
+        background-size: cover;
+        background: url("image4.jpeg");
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 50%;
+        font-family: sans-serif;
+    }
+
+    .login {
+        background: rgba(44, 62, 80, 0.7);
+        padding: 40px;
+        width: 250px;
+        height: 4309px;
+        margin-top: 90px;
+        margin-left: 180px;
+        margin: auto;
+    }
+
+    form {
+        width: 240px;
+        text-align: center;
+    }
+
+    input {
+        width: 240px;
+        text-align: center;
+        background: white;
+        border: purple;
+        border-bottom: 1px;
+        font-size: 16px;
+        font-weight: 200px;
+        padding: 10px 0;
+        transition: border 0.5s;
+        outline: purple;
+    }
+
+    input[type=button] {
+        border: black;
+        width: 190px;
+        background: white;
+        font-size: 16px;
+        line-height: 25px;
+        padding: 10px 0;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    [type=submit]:hover {
+        background: purple
+    }
+</style>
 <form action="/login" method="POST">
 
-    <div>
-        <label for="email"> Email </label>
-        <input type="email" id="email" name="email" required>
+    <div class="login">
+
+        <div>
+            <label for="email"> Email </label>
+            <input type="email" id="email" placeholder="Please enter your Email" name="email" required>
+        </div><br> <br>
+
+        <div>
+            <label for="password"> Password </label>
+            <input type="password" id="password" placeholder="Password" name="password" required>
+        </div> <br><br>
+        <button type="submit"> Login </button>
     </div>
-    <div>
-        <label for="password"> Password </label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <button type="submit"> Login </button>
 </form>
+
 <a href="/register"> Register </a>
