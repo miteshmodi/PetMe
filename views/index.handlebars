@@ -1,6 +1,6 @@
 <div class="page-holder bg-cover">
-    <div class="mask rgba-gradient align-items-center">
-        {{!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <div class="mask rgba-gradient align-items-center">
+    {{!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
@@ -9,39 +9,39 @@
             <span class="sr-only">Next</span>
         </a> --}}
 
-        {{> navigationbar}}
-        <div class="container">
-            <h1 class="petmetxt">PetMe</h1>
-            <h1 class="getbuddytxt">Looking to Get a Buddy?</h1>
-            {{> searchpetform}}
-        </div>
+    {{> navigationbar}}
+    <div class="container">
+      <h1 class="petmetxt">PetMe</h1>
+      <h1 class="getbuddytxt">Looking to Get a Buddy?</h1>
+      {{> searchpetform}}
     </div>
+  </div>
 </div>
 <script>
-    function geoFindMe() {
+  function geoFindMe() {
 
     function invokeGeoLocationReverseGeoCodingApi(position) {
-      const latitude  = position.coords.latitude;
+      const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
-      
+
       queryUrl = "https://api.opencagedata.com/geocode/v1/json?q=" + latitude + "+" + longitude + "&key=" + "{{GeoLocationApi}}";
 
-        $.ajax({
-          url: queryUrl,
-          method: "GET"
-        }).then(function(response) {
-          let getZipCode = response.results["0"].components.postcode;
-          $("#zipcode").val(getZipCode);
-        });
+      $.ajax({
+        url: queryUrl,
+        method: "GET"
+      }).then(function (response) {
+        let getZipCode = response.results["0"].components.postcode;
+        $("#zipcode").val(getZipCode);
+      });
     }
 
-    function error() {        
+    function error() {
       return 'Unable to retrieve your location';
     }
 
     navigator.geolocation.getCurrentPosition(invokeGeoLocationReverseGeoCodingApi, error);
-    
-}
 
-geoFindMe();
+  }
+
+  geoFindMe();
 </script>
