@@ -12,7 +12,10 @@ CREATE TABLE pets (
 	zip_code VARCHAR(255) NOT NULL,
 	pet_name VARCHAR(255),
     image LONGBLOB,
-	PRIMARY KEY (id)
+	adopted BOOLEAN NOT NULL DEFAULT FALSE,
+	admin_id INTEGER NOT NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (admin_id) REFERENCES admin(id)
 );
 
 CREATE TABLE customers (

@@ -152,26 +152,19 @@ module.exports = function (app) {
             });
     });
 
-// GET route for returning pets of a specific breed, age, and zip code
-app.get("/api/pets/breed/:breed/age/:age/zip_code/:zip_code", function (req, res) {
-    db.Pets.findAll({
-        where: {
-            breed: req.params.breed,
-            age: req.params.age,
-            zip_code: req.params.zip_code
-        }
-    })
-        .then(function (dbPets) {
-            res.json(dbPets);
-        });
-});
-
-
-
-
-
-
-
+    // GET route for returning pets of a specific breed, age, and zip code
+    app.get("/api/pets/breed/:breed/age/:age/zip_code/:zip_code", function (req, res) {
+        db.Pets.findAll({
+            where: {
+                breed: req.params.breed,
+                age: req.params.age,
+                zip_code: req.params.zip_code
+            }
+        })
+            .then(function (dbPets) {
+                res.json(dbPets);
+            });
+    });
 
 
 
