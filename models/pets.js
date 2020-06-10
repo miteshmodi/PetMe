@@ -17,7 +17,22 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         pet_name: DataTypes.STRING,
-        image: DataTypes.BLOB('long')
+        image: DataTypes.BLOB('long'),
+        adopted: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false
+        },
     });
+
+    Pets.associate = function(models) {
+        // We're saying that a pet listing should belong to an admin user
+        // A pet can't be created without an admin user due to the foreign key constraint
+        Pets.belongsTo(models.Admin, {
+          foreignKey: {
+            allowNull: false
+          }
+        });
+      };
     return Pets;
 };
