@@ -14,11 +14,11 @@ var db = require("./models");
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true,
-  }));
+// app.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: true,
+//   }));
 // app.use(express.static(path.join(__dirname, '/public')));
 
 // Static directory
@@ -30,8 +30,9 @@ app.use(express.static("public"));
 // =============================================================
 // require("./routes/home-route.js")(app);
 var routes = require("./routes/home-route.js");
-
+var adminregroute = require("./routes/registeradmin-route.js");
 app.use(routes);
+app.use(adminregroute);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
