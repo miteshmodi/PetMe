@@ -18,6 +18,8 @@ module.exports = function (sequelize, DataTypes) {
         },
         pet_name: DataTypes.STRING,
         image: DataTypes.BLOB('long')
+
+        
     });
     return Pets;
 };
