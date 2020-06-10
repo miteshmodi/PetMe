@@ -11,10 +11,37 @@
 
         {{> navigationbar}}
         <div class="container">
-
             <h1 class="petmetxt">PetMe</h1>
             <h1 class="getbuddytxt">Looking to Get a Buddy?</h1>
             {{> searchpetform}}
         </div>
     </div>
 </div>
+<script>
+    function geoFindMe() {
+
+    function invokeGeoLocationReverseGeoCodingApi(position) {
+      const latitude  = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      
+      queryUrl = "https://api.opencagedata.com/geocode/v1/json?q=" + latitude + "+" + longitude + "&key=" + "{{GeoLocationApi}}";
+
+        $.ajax({
+          url: queryUrl,
+          method: "GET"
+        }).then(function(response) {
+          let getZipCode = response.results["0"].components.postcode;
+          $("#zipcode").val(getZipCode);
+        });
+    }
+
+    function error() {        
+      return 'Unable to retrieve your location';
+    }
+
+    navigator.geolocation.getCurrentPosition(invokeGeoLocationReverseGeoCodingApi, error);
+    
+}
+
+geoFindMe();
+</script>
