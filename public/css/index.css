@@ -1,15 +1,23 @@
+/*---------- Header Section ---------*/
+
 .getbuddytxt {
     text-align: left;
     padding-left: 10%;
     color: white;
+
+
 }
 
 .petmetxt {
+
     text-align: left;
     padding-left: 20%;
     font-size: 60px;
     padding-bottom: 5%;
     color: beige;
+
+
+
 }
 
 .searchform {
@@ -20,72 +28,85 @@
     min-height: 100vh;
 }
 
+/*----------End of Header Section ---------*/
+
 html,
-body,  
+body,
 .bg-cover {
     height: 100%;
-    background-image: url('/images/dog.jpg'); 
+    background-image: url('/images/dog.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
+    font-family: 'Comic Neue', cursive;
+
+
 }
 
 @media (max-width: 740px) {
+
     html,
-    body,  
+    body,
     .bg-cover {
-        height: 1000px;
-        background-image: url('/images/dog.jpg'); 
+        height: 100%;
+        background-image: url('/images/dog.jpg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        font-family: 'Comic Neue', cursive;
+
     }
 }
 
 @media (min-width: 800px) and (max-width: 850px) {
+
     html,
-    body,  
+    body,
     .bg-cover {
         height: 1000px;
-        background-image: url('/images/dog.jpg'); 
+        background-image: url('/images/dog.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;   
+        background-position: center;
+        font-family: 'Comic Neue', cursive;
+
     }
 }
 
-  .navbar {
+.navbar {
     background: rgba(0, 0, 0, 0.6) !important;
-  }
-  
-  @media (max-width: 991px) {
+    font-family: 'Comic Neue', cursive;
+
+}
+
+@media (max-width: 991px) {
     .navbar:not(.top-nav-collapse) {
-      background: rgba(0, 0, 0, 0.6) !important;
+        background: rgba(0, 0, 0, 0.6) !important;
     }
-  }
+}
 
-  .navbar-toggler {
-      border: 1px solid white !important;
-  }
+.navbar-toggler {
+    border: 1px solid white !important;
+}
 
-  .navbar-toggler:hover {
+.navbar-toggler:hover {
     border: 2px solid white !important;
     opacity: 0.5;
 }
 
-  .navbar-toggler-icon {
-      color: white !important;
-  }
-  
+.navbar-toggler-icon {
+    color: white !important;
+}
+
 
 .rgba-gradient {
     background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.342), rgba(144, 15, 15, 0.05) 100%);
     background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
-  }
+}
 
 #nav-text {
     color: white;
+    /*  background-image: url("/PetMe/Assets/Logos/PetMe\ Logo\ Long\ whtbkg.png"); */
 }
 
 #nav-text:active {
@@ -103,28 +124,43 @@ body,
     opacity: 0.5;
 }
 
-#age, #petType, #milesrange {
-    width:200px;
+/* Logo implementation section */
+
+
+/*a#nav-text.navbar-brand {
+    
+    background-image: url("/PetMe/Assets/Logos/PetMe\ Logo\ Long\ whtbkg.png");
+} */
+/* ---End of Logo implementation section */
+#age,
+#petType,
+#milesrange {
+    width: 200px;
     background-color: white;
 }
 
-#age:hover, #petType:hover, #milesrange:hover {
-    width:200px;
+#age:hover,
+#petType:hover,
+#milesrange:hover {
+    width: 200px;
     background-color: white;
     border: 2px rgb(0, 140, 255) solid;
 }
 
-#age:focus, #petType:focus, #milesrange:focus {
-    width:200px;
+#age:focus,
+#petType:focus,
+#milesrange:focus {
+    width: 200px;
     background-color: white;
     border: 2px rgb(0, 255, 34) solid;
 }
 
-#breed:hover, #zipcode:hover {
+#breed:hover,
+#zipcode:hover {
     border: 2px rgb(0, 140, 255) solid;
 }
 
-#breed:focus, #zipcode:focus {
+#breed:focus,
+#zipcode:focus {
     border: 2px rgb(0, 255, 34) solid;
 }
-

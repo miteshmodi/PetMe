@@ -1,5 +1,5 @@
 {
-  "name": "express",
+  "name": "petme",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,6 +10,8 @@
     "express": "^4.17.1",
     "express-handlebars": "^4.0.4",
     "mysql2": "^2.1.0",
+    "node": "^14.4.0",
+    "nodemon": "^2.0.4",
     "sequelize": "^5.21.12"
   },
   "devDependencies": {},
