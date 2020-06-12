@@ -1,15 +1,14 @@
-{{> navigationbar}}
-
 <div class="login-section">
 
-    <div class="wrapper">
-        <h1> Sign In </h1>
-        <form action="">
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <input type="submit" value="LOGIN">
+    {{> navigationbar}}
 
+
+    <div class="wrapper mask rgba-gradient align-items-center">
+        <h1> Sign In </h1>
+        <form id="loginform">
+            <input type="email" placeholder="Email" id="loginemail">
+            <input type="password" placeholder="Password" id="loginpassword">
+            <input type="submit" value="LOGIN">
         </form>
         <div class="bottom-text">
             <input type="checkbox" name="remember" checked="checked"> Remember Me
@@ -24,8 +23,6 @@
     </div>
 
 </div>
-
-
 
 <div class="page-wrapper">
 

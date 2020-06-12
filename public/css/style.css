@@ -324,30 +324,35 @@ textarea.contact-form-text {
 
 
 /*-------- Login Section ---------- */
+html,
+body,
 .login-section {
-    background-image: url("/PetMe/Assets/PetPics/pet-rabbit-on-green-grass-P5EQ5GR.jpg");
+    height: 100%;
+    background-image: url("/images/pet-rabbit-on-green-grass-P5EQ5GR.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Comic Neue', cursive;
 }
 
 .wrapper {
     width: 400px;
     height: 420px;
-    color: bisque;
+    color: white;
     top: 50%;
     left: 50%;
     padding: 60px 30px;
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    box-shadow: 8px 8px 50px gold;
-    background-color: rosybrown;
-
+    box-shadow: 8px 8px 50px gold
 }
 
 h1 {
     margin: 0;
     padding: 0;
     font-weight: bold;
-    color: bisque;
+    color: white;
     text-align: center;
     margin-bottom: 8%;
     font-size: 22px;
@@ -356,21 +361,24 @@ h1 {
 .wrapper input {
     width: 100%;
     margin-bottom: 20px;
+    color:white;
+}
 
+::placeholder {
+    color: white;
 }
 
 .wrapper input[type=text],
 .wrapper input[type=email],
 .wrapper input[type=password] {
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     background: transparent;
     outline: none;
     height: 30px;
     font-size: 16px;
     opacity: 1;
-    color: black;
-
+    color: white;
 }
 
 .wrapper input[type=submit] {
@@ -391,21 +399,21 @@ h1 {
 .wrapper a {
     font-size: 14px;
     text-decoration: none;
-    color: black;
+    color: white;
     opacity: 0.8;
 }
 
 .wrapper a:hover {
     opacity: 1;
-    color: black;
+    color: white;
 }
 
 .bottom-text {
-    color: black;
+    color: white;
 }
 
 .bottom-text input {
-    color: black;
+    color: white;
     width: 10%;
     float: left;
 }
