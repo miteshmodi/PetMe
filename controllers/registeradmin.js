@@ -2,7 +2,7 @@ var db = require("../models");
 // rendering index.handlebars with title attributes, 
 // passing only necessary css files and js files dynamically
 exports.registerAdmin = (req, res, next) => {
-    res.render('registeradmin' , {
+    res.render('registeradmin', {
         title: 'Register Admin',
         // css: [ 'index.css', 'registeradmin.css' ],
         js: ['registeradminform.js']
@@ -11,13 +11,13 @@ exports.registerAdmin = (req, res, next) => {
 
 exports.postAdmin = (req, res) => {
     var adminpost = "";
-    db.Admin.create(req.body).then(function(dbPost) {
+    db.Admin.create(req.body).then(function (dbPost) {
         adminpost = JSON.stringify(dbPost);
     });
 
-    res.render('registeradmin' , {
+    res.render('registeradmin', {
         title: 'Register Admin',
-        css: [ 'index.css', 'registeradmin.css' ],
+        css: ['index.css', 'registeradmin.css'],
         js: ['registeradminform.js'],
         result: adminpost
     });

@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Comic Neue', cursive;
+    /* footer css */
+    height: 100%;
+}
+
+
+/*----------- Navigation Bar -------------*/
+.nav-menu {
+    padding: 25px;
+
+}
+
+.menu {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #dbc1ac;
+    transition: all .4s;
+
+}
+
+.menu:hover {
+    color: slateblue;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+    transition: all .4s;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+/*----------- End of Navigation Bar -------------*/
+
+/* page wrapper to get a perfect sticky footer */
+.page-wrapper {
+    min-height: 100%;
+}
+
+
+/*----------Header Section ---------*/
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+        url(img/image2.jpeg) no-repeat center center/cover;
+}
+
+.banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.heading {
+    animation-name: slide;
+    animation-duration: 1s;
+
+}
+
+.main {
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*----------End of Header Section ---------*/
+
+/*----------Adopt Section ---------*/
+#adopt {
+    background: black;
+    margin-top: 30px;
+    color: #dbc1ac;
+}
+
+.text {
+    font-size: 15px;
+
+}
+
+.about-images {
+    position: relative;
+
+}
+
+.about-img {
+    position: absolute;
+    width: 150px;
+    transition: all 2s ease;
+    opacity: 0.9;
+}
+
+.img-1 {
+    background-image: url(/PetMe/Assets/PetPics/bengal-cat-lying-on-white-wooden-floor-WDQAYZ2.jpg);
+    left: 0%;
+    top: 0%;
+
+}
+
+.img-2 {
+    left: 20%;
+    top: 20%;
+    z-index: 10;
+
+}
+
+.img-3 {
+    left: 40%;
+    top: 45%;
+    z-index: 20;
+}
+
+.img-4 {
+    left: 40%;
+    top: 0%;
+}
+
+.img-5 {
+    left: 0%;
+    top: 45%;
+}
+
+.about-img:hover {
+    outline: 10px solid #dbc1ac;
+    outline-offset: 32px;
+    transform: scale(1.3) rotate(20deg);
+    z-index: 30;
+    opacity: 1;
+
+}
+
+.about-images:hover,
+.about-img:not(:hover) {
+    opacity: 0.5;
+}
+
+.btn {
+    color: wheat;
+    font-weight: bold;
+    border: 2px solid wheat;
+    font-size: 25px;
+}
+
+.hvr-right {
+    display: inline-block;
+    vertical-align: middle;
+    transition-duration: 0.5s;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0);
+    position: relative;
+    transition-property: color;
+}
+
+.hvr-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: blue;
+    transition-timing-function: ease-out;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.hvr-right:hover,
+.hvr-right:focus,
+.hvr-right:active {
+    color: black;
+}
+
+.hvr-right:hover:before,
+.hvr-right:focus:before,
+.hvr-right:active:before {
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transform: scaleX(1);
+}
+
+/*----------End of Adopt Section ---------*/
+
+/*---------- Donate Section ---------*/
+.content-4 .nav-tabs {
+    margin: 2px;
+    border: none;
+    border-bottom: 0px;
+    text-align: center;
+    cursor: pointer;
+    background: black;
+
+}
+
+.content-4 .tab-item {
+    text-decoration: none;
+    color: #dbc1ac;
+
+}
+
+.content-4 .tab-item i {
+    display: block;
+    font-size: 45px;
+    padding: 0.4em 1.7em 0em 1.7em;
+}
+
+.content-4 .tab-item span {
+    display: inline-block;
+    padding-bottom: 16px;
+    width: 100%;
+}
+
+.content-4 .tab-item.active {
+    color: purple;
+}
+
+.tab-content {
+    margin-bottom: 5%;
+    transition: all .4s ease;
+}
+
+
+
+/*----------End of Donate Section ---------*/
+
+
+/*---------- Contact Us Section ---------*/
+.contact-section {
+    background: url(./Assets/PetPics/black-dog.jpg) no-repeat center;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+.contact-section h1 {
+    text-align: center;
+    color: bisque;
+    font-size: 30px;
+}
+
+.border {
+    width: 100px;
+    height: 10px;
+    background: #34495e;
+    margin: 40px auto;
+
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: whitesmoke;
+    transition: 0.5s;
+
+}
+
+.contact-form-text:focus {
+    box-shadow: 0 0 10px 4px blue;
+
+}
+
+textarea.contact-form-text {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form-btn {
+    float: right;
+    border: 0;
+    background: #34495e;
+    color: #ffffff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contact-form-btn:hover {
+    background: #2980b9;
+
+}
+
+/*----------End of  Contact Us Section ---------*/
+
+
+/*-------- Login Section ---------- */
+.login-section {
+    background-image: url("/PetMe/Assets/PetPics/pet-rabbit-on-green-grass-P5EQ5GR.jpg");
+}
+
+.wrapper {
+    width: 400px;
+    height: 420px;
+    color: bisque;
+    top: 50%;
+    left: 50%;
+    padding: 60px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 8px 8px 50px gold;
+    background-color: rosybrown;
+
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: bisque;
+    text-align: center;
+    margin-bottom: 8%;
+    font-size: 22px;
+}
+
+.wrapper input {
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.wrapper input[type=text],
+.wrapper input[type=email],
+.wrapper input[type=password] {
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    font-size: 16px;
+    opacity: 1;
+    color: black;
+
+}
+
+.wrapper input[type=submit] {
+    outline: none;
+    height: 40px;
+    border: none;
+    background: honeydew;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.wrapper input[type=submit]:hover {
+    cursor: pointer;
+}
+
+.wrapper a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+}
+
+.wrapper a:hover {
+    opacity: 1;
+    color: black;
+}
+
+.bottom-text {
+    color: black;
+}
+
+.bottom-text input {
+    color: black;
+    width: 10%;
+    float: left;
+}
+
+.bottom-text a {
+    float: right;
+}
+
+.socials {
+    text-align: center;
+    margin-top: 12%;
+}
+
+.socials a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.socials a:nth-child(1) {
+    background: #3b5998;
+}
+
+.socials a:nth-child(2) {
+    background: #55acee;
+}
+
+.socials a:nth-child(3) {
+    background: #bd081c;
+}
+
+.socials a i {
+    padding: 8px 0;
+}
+
+#overlay-area {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -5px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+
+}
+
+
+
+
+
+/*-------- End of Login Section ----------*/
+
+
+
+
+
+
+
+
+/*----------Footer Section ---------*/
+footer {
+    background: black;
+    padding-top: 2%;
+    margin-top: 15px;
+    position: relative;
+}
+
+.text-center h4 {
+    color: #dbc1ac;
+
+}
+
+footer span {
+    padding: 0.3em 0.7em;
+    color: #dbc1ac;
+    transition: all .5s ease;
+}
+
+footer p {
+    color: #dbc1ac;
+    font-size: 10px;
+}
+
+footer .top a {
+    color: #dbc1ac;
+    font-size: 15px;
+
+    /* .footer .footer-bottom comencement     position: absolute;*/
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    height: 50px;
+    background: #343a40;
+    padding-top: 20px;
+    width: 100%;
+
+
+}
+
+/*----------End of Footer Section ---------*/
