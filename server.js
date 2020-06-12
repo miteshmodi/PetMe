@@ -1,6 +1,8 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
 // var session = require("express-session");
+var router = express.Router();
+const path = require("path");
 
 require('dotenv').config();
 
@@ -37,10 +39,24 @@ app.use(express.static("public"));
 // =============================================================
 // require("./routes/home-route.js")(app);
 var routes = require("./routes/home-route.js");
+//<<<<<<< HEAD
 var aboutRoutes = require("./routes/about-route.js");
+app
 
 app.use(routes);
-app.use(aboutRoutes);
+app.use(aboutRoutes, router);
+router.get("./about", function (req, resp) {
+  resp.end("uhmm");
+})
+
+var adminregroute = require("./routes/registeradmin-route.js");
+
+app.use(adminregroute);
+
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "views", "index.html"));
+})
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
