@@ -2,10 +2,10 @@ const path = require('path');
 
 const express = require('express');
 
-const homepageController = require('../controllers/contact');
+const homepageController = require('../controllers/login');
 
 const router = express.Router();
 
-router.get('/contact', homepageController.getContactPage);
+router.get('/login', homepageController.getLoginPage);
 
 module.exports = router;
