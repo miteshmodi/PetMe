@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
+html,
 body {
     font-family: 'Comic Neue', cursive;
+    /* footer css */
+    height: 100%;
 }
 
 
@@ -41,6 +44,11 @@ body {
 }
 
 /*----------- End of Navigation Bar -------------*/
+
+/* page wrapper to get a perfect sticky footer */
+.page-wrapper {
+    min-height: 100%;
+}
 
 
 /*----------Header Section ---------*/
@@ -110,6 +118,7 @@ header {
 }
 
 .img-1 {
+    background-image: url(/PetMe/Assets/PetPics/bengal-cat-lying-on-white-wooden-floor-WDQAYZ2.jpg);
     left: 0%;
     top: 0%;
 
@@ -153,9 +162,9 @@ header {
 }
 
 .btn {
-    color: #dbc1ac;
+    color: wheat;
     font-weight: bold;
-    border: 2px solid blueviolet;
+    border: 2px solid wheat;
     font-size: 25px;
 }
 
@@ -177,7 +186,7 @@ header {
     left: 0;
     bottom: 0;
     right: 0;
-    background: #dbc1ac;
+    background: blue;
     transition-timing-function: ease-out;
     transform: scaleX(0);
     transform-origin: 0 50%;
@@ -241,3 +250,262 @@ header {
 
 
 /*----------End of Donate Section ---------*/
+
+
+/*---------- Contact Us Section ---------*/
+.contact-section {
+    background: url(./Assets/PetPics/black-dog.jpg) no-repeat center;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+.contact-section h1 {
+    text-align: center;
+    color: bisque;
+    font-size: 30px;
+}
+
+.border {
+    width: 100px;
+    height: 10px;
+    background: #34495e;
+    margin: 40px auto;
+
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: whitesmoke;
+    transition: 0.5s;
+
+}
+
+.contact-form-text:focus {
+    box-shadow: 0 0 10px 4px blue;
+
+}
+
+textarea.contact-form-text {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form-btn {
+    float: right;
+    border: 0;
+    background: #34495e;
+    color: #ffffff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contact-form-btn:hover {
+    background: #2980b9;
+
+}
+
+/*----------End of  Contact Us Section ---------*/
+
+
+/*-------- Login Section ---------- */
+.login-section {
+    background-image: url("/PetMe/Assets/PetPics/pet-rabbit-on-green-grass-P5EQ5GR.jpg");
+}
+
+.wrapper {
+    width: 400px;
+    height: 420px;
+    color: bisque;
+    top: 50%;
+    left: 50%;
+    padding: 60px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    box-shadow: 8px 8px 50px gold;
+    background-color: rosybrown;
+
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: bisque;
+    text-align: center;
+    margin-bottom: 8%;
+    font-size: 22px;
+}
+
+.wrapper input {
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.wrapper input[type=text],
+.wrapper input[type=email],
+.wrapper input[type=password] {
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    font-size: 16px;
+    opacity: 1;
+    color: black;
+
+}
+
+.wrapper input[type=submit] {
+    outline: none;
+    height: 40px;
+    border: none;
+    background: honeydew;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.wrapper input[type=submit]:hover {
+    cursor: pointer;
+}
+
+.wrapper a {
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    opacity: 0.8;
+}
+
+.wrapper a:hover {
+    opacity: 1;
+    color: black;
+}
+
+.bottom-text {
+    color: black;
+}
+
+.bottom-text input {
+    color: black;
+    width: 10%;
+    float: left;
+}
+
+.bottom-text a {
+    float: right;
+}
+
+.socials {
+    text-align: center;
+    margin-top: 12%;
+}
+
+.socials a {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.socials a:nth-child(1) {
+    background: #3b5998;
+}
+
+.socials a:nth-child(2) {
+    background: #55acee;
+}
+
+.socials a:nth-child(3) {
+    background: #bd081c;
+}
+
+.socials a i {
+    padding: 8px 0;
+}
+
+#overlay-area {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -5px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+
+}
+
+
+
+
+
+/*-------- End of Login Section ----------*/
+
+
+
+
+
+
+
+
+/*----------Footer Section ---------*/
+footer {
+    background: black;
+    padding-top: 2%;
+    margin-top: 15px;
+    position: relative;
+}
+
+.text-center h4 {
+    color: #dbc1ac;
+
+}
+
+footer span {
+    padding: 0.3em 0.7em;
+    color: #dbc1ac;
+    transition: all .5s ease;
+}
+
+footer p {
+    color: #dbc1ac;
+    font-size: 10px;
+}
+
+footer .top a {
+    color: #dbc1ac;
+    font-size: 15px;
+
+    /* .footer .footer-bottom comencement     position: absolute;*/
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    height: 50px;
+    background: #343a40;
+    padding-top: 20px;
+    width: 100%;
+
+
+}
+
+/*----------End of Footer Section ---------*/

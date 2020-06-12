@@ -39,24 +39,23 @@ app.use(express.static("public"));
 // =============================================================
 // require("./routes/home-route.js")(app);
 var routes = require("./routes/home-route.js");
-//<<<<<<< HEAD
-var aboutRoutes = require("./routes/about-route.js");
-app
 
-app.use(routes);
-app.use(aboutRoutes, router);
-router.get("./about", function (req, resp) {
-  resp.end("uhmm");
-})
+var aboutRoutes = require("./routes/about-route.js");
+var contactRoutes = require("./routes/contact-route.js");
+var loginRoutes = require("./routes/login-route.js");
 
 var adminregroute = require("./routes/registeradmin-route.js");
+
+
+app.use(routes);
+
+app.use(aboutRoutes, router);
+app.use(contactRoutes, router);
+app.use(loginRoutes, router);
 
 app.use(adminregroute);
 
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-})
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
