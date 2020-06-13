@@ -1,8 +1,8 @@
-$(document).ready(function() {
-    
+$(document).ready(function () {
+
     var $email = $("#loginemail");
     var $pw = $("#loginpassword");
-   
+
     $(document).on("submit", "#loginform", validateUser);
 
     function validateUser(event) {
@@ -14,21 +14,21 @@ $(document).ready(function() {
 
         if (!user.email || !user.password) {
             return;
-          }
-        
+        }
+
         $.post("/login", user)
-        .then(getHomePage);
+            .then(getHomePage);
         $email.val("");
         $pw.val("");
     }
 
     function getHomePage() {
-        $.get("/", function(){
+        $.get("/", function () {
             window.location.replace("/");
         })
-        .catch(function(err) {
-            console.log(err);
-        });
-      }
-    
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
+
 });

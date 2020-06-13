@@ -15,7 +15,7 @@ exports.postLoginPage = (req, res, next) => {
     var userEmail = req.body.email,
         userPw = req.body.password;
     
-    const customer = db.Customers.findAll({
+    db.Customers.findAll({
         where: {
             email: userEmail,
             password: userPw
