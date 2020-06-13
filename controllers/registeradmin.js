@@ -10,15 +10,7 @@ exports.registerAdmin = (req, res, next) => {
 };
 
 exports.postAdmin = (req, res) => {
-    var adminpost = "";
     db.Admin.create(req.body).then(function (dbPost) {
-        adminpost = JSON.stringify(dbPost);
-    });
-
-    res.render('registeradmin', {
-        title: 'Register Admin',
-        css: ['index.css', 'registeradmin.css'],
-        js: ['registeradminform.js'],
-        result: adminpost
+        res.redirect("/login");
     });
 };
