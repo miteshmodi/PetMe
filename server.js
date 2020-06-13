@@ -2,6 +2,13 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var router = express.Router();
 const path = require("path");
+const bodyParser = require("body-parser");
+const sendMail = require("./public/js/mail");
+// const data = require("./public/submitcontact");
+
+
+
+const nodemailer = require("nodemailer");
 
 require('dotenv').config();
 
@@ -23,6 +30,9 @@ app.use(express.json());
 
 // Static directory
 app.use(express.static("public"));
+// Static folder ----needed for contact submit
+app.use("/public", express.static(path.join(__dirname, "public")));
+
 //app.use(passport.session());
 
 
@@ -40,6 +50,7 @@ var adminregroute = require("./routes/registeradmin-route.js");
 var signuproute = require("./routes/signup-route.js");
 var listpet = require("./routes/registerpet-route.js");
 
+
 app.use(routes);
 app.use(aboutRoutes, router);
 app.use(contactRoutes, router);
@@ -49,12 +60,20 @@ app.use(signuproute);
 app.use(listpet);
 
 
+
+// app.get("/contact", (req, res) => {
+//   res.render("contactuspage");
+// });
+
+
+
+
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({
   force: false
 }).then(function () {
-    app.listen(PORT, function () {
+  app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
 });
