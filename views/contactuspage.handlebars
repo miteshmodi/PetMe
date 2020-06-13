@@ -9,11 +9,11 @@
             <div class="border"></div>
 
             <form class="contact-form" action="index.html" method="post">
-                <input type="text" class="contact-form-text" placeholder="Your Name">
-                <input type="email" class="contact-form-text" placeholder="Your Email"><small id="emailHelp"
+                <input type="text" class="contact-form-text" placeholder="Your Name" maxlength="64" required>
+                <input type="email" class="contact-form-text" placeholder="Your Email" maxlength="96" required><small id="emailHelp"
                     class="form-text text-muted">We'll never share your email with anyone else.</small>
-                <input type="text" class="contact-form-text" placeholder="Your Phone Number">
-                <textarea class="contact-form-text" placeholder="Please type in your Message"></textarea>
+                <input type="number" class="contact-form-text" placeholder="Your Phone Number" maxlength="32">
+                <textarea class="contact-form-text" placeholder="Please type in your Message" maxlength="500"></textarea>
                 <input type="submit" class="contact-form-btn" value="Send">
 
             </form>
