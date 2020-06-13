@@ -36,17 +36,15 @@ var routes = require("./routes/home-route.js");
 var aboutRoutes = require("./routes/about-route.js");
 var contactRoutes = require("./routes/contact-route.js");
 var loginRoutes = require("./routes/login-route.js");
-
 var adminregroute = require("./routes/registeradmin-route.js");
-
+var signuproute = require("./routes/signup-route.js");
 
 app.use(routes);
-
 app.use(aboutRoutes, router);
 app.use(contactRoutes, router);
 app.use(loginRoutes, router);
 app.use(adminregroute);
-
+app.use(signuproute);
 
 
 // Syncing our sequelize models and then starting our Express app

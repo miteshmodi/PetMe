@@ -1,30 +1,27 @@
 $(document).ready(function() {
     
-    var $firstName = $("#firstName");
-    var $lastName = $("#lastName");
-    var $roleAdmin = $("#roleAdmin");
-    var $adminemail = $("#adminemail");
-    var $password = $("#password");
+    var $firstName = $("#firstname");
+    var $lastName = $("#lastname");
+    var $email = $("#signupemail");
+    var $password = $("#signuppassword");
 
 
-    $(document).on("submit", "#adminregisterform", insertNewAdmin);
+    $(document).on("submit", "#signupform", insertNewCustomer);
 
-    function insertNewAdmin(event) {
+    function insertNewCustomer(event) {
         event.preventDefault();
-        var insertAdmin = {
+        var inserCustomer = {
             first_name: $firstName.val().trim(),
             last_name: $lastName.val().trim(),
-            role: $roleAdmin.val().trim(),
-            email: $adminemail.val().trim(),
+            email: $email.val().trim(),
             password: $password.val().trim()
         };
 
-        $.post("/registeradmin", insertAdmin)
+        $.post("/register", inserCustomer)
         .then(getLoginPage);
         $firstName.val("");
         $lastName.val("");
-        $roleAdmin.val("");
-        $adminemail.val("");
+        $email.val("");
         $password.val("");
     }
 
