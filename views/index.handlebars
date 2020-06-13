@@ -22,20 +22,20 @@
   function geoFindMe() {
 
     function invokeGeoLocationReverseGeoCodingApi(position) {
-      
+
       var location = {
         latitude: position.coords.latitude,
         longitude: position.coords.longitude
       }
-      
-        $.ajax({
-          url: "/geolocation",
-          method: "PUT",
-          data: location
-        }).then(function(response) {
-          let getZipCode = response.results["0"].components.postcode;
-          $("#zipcode").val(getZipCode);
-        });
+
+      $.ajax({
+        url: "/geolocation",
+        method: "PUT",
+        data: location
+      }).then(function (response) {
+        let getZipCode = response.results["0"].components.postcode;
+        $("#zipcode").val(getZipCode);
+      });
     }
 
     function error() {
