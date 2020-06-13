@@ -361,7 +361,7 @@ h1 {
 .wrapper input {
     width: 100%;
     margin-bottom: 20px;
-    color:white;
+    color: white;
 }
 
 ::placeholder {
@@ -385,7 +385,7 @@ h1 {
     outline: none;
     height: 40px;
     border: none;
-    background: honeydew;
+    background: goldenrod;
     color: black;
     font-weight: bold;
     font-size: 14px;
@@ -501,7 +501,7 @@ footer p {
 }
 
 footer .top a {
-    color: #dbc1ac;
+    color: goldenrod;
     font-size: 15px;
 
     /* .footer .footer-bottom comencement     position: absolute;*/
