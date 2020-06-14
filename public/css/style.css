@@ -95,13 +95,22 @@ header {
 
 /*----------Adopt Section ---------*/
 #adopt {
-    background: black;
+    /* background: purple; */
     margin-top: 30px;
     color: #dbc1ac;
+    height: 100%;
+    /* background: -webkit-linear-gradient(45deg,
+            rgba(144, 15, 15, 0.05) 100%); */
+    background: linear-gradient(to 45deg, rgba(41, 2, 53, 0.596), rgba(245, 255, 242, 0.4) 100%);
 }
 
 .text {
     font-size: 15px;
+
+}
+
+.text-uppercase {
+    font-size: 30px;
 
 }
 
@@ -254,7 +263,7 @@ header {
 
 /*---------- Contact Us Section ---------*/
 .contact-section {
-    background: url(./Assets/PetPics/black-dog.jpg) no-repeat center;
+    background: url("../images/happy\ family.jpg") no-repeat center;
     background-size: cover;
     padding: 40px 0;
 }
@@ -268,7 +277,7 @@ header {
 .border {
     width: 100px;
     height: 10px;
-    background: #34495e;
+    background: purple;
     margin: 40px auto;
 
 }
@@ -280,13 +289,17 @@ header {
     overflow: hidden;
 }
 
+.contact-us-textnow {
+    color: indigo;
+}
+
 .contact-form-text {
     display: block;
     width: 100%;
     box-sizing: border-box;
     margin: 16px 0;
     border: 0;
-    background: #111;
+    background: rgba(10, 1, 10, 0.829);
     padding: 20px 40px;
     outline: none;
     color: whitesmoke;
@@ -295,7 +308,8 @@ header {
 }
 
 .contact-form-text:focus {
-    box-shadow: 0 0 10px 4px blue;
+    box-shadow: 0 0 10px 4px rgb(255, 230, 0);
+    /* background: content-box radial-gradient(crimson, skyblue); */
 
 }
 
@@ -307,7 +321,7 @@ textarea.contact-form-text {
 .contact-form-btn {
     float: right;
     border: 0;
-    background: #34495e;
+    background: rgb(22, 0, 22);
     color: #ffffff;
     padding: 12px 50px;
     border-radius: 20px;
@@ -316,7 +330,7 @@ textarea.contact-form-text {
 }
 
 .contact-form-btn:hover {
-    background: #2980b9;
+    background: goldenrod;
 
 }
 
