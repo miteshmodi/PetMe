@@ -3,7 +3,6 @@ $(".contact-form-btn").on("click", (e) => {
 
     console.log("testing");
 
-
     const name = $("#name").val().trim();
     const email = $("#email").val().trim();
     const phonenumber = $("#phonenumber").val().trim();
