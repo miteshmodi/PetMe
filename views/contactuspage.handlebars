@@ -3,29 +3,30 @@
         {{> navigationbar}}
 
 
+
         <div class="contact-section">
+            <h1 class="contact-us-textnow"> CONTACT US </h1>
+            {{!--  {{msg}} --}}
+            <div class="border"></div>
 
-            <h1> Contact Us </h1>
-
-            <div class="border"> </div>
-
-            <form class="contact-form" action="index.html" method="post">
-                <input type="text" class="contact-form-text" placeholder="Your Name" maxlength="64" required>
-                <input type="email" class="contact-form-text" placeholder="Your Email" maxlength="96" required><small id="emailHelp"
-                    class="form-text text-muted">We'll never share your email with anyone else.</small>
-<<<<<<< HEAD
-                <input type="number" class="contact-form-text" placeholder="Your Phone Number" maxlength="32">
-                <textarea class="contact-form-text" placeholder="Please type in your Message" maxlength="500"></textarea>
-                <input type="submit" class="contact-form-btn" value="Send">
-=======
-                <input type="text" class="contact-form-text" placeholder="Your Phone Number">
-                <textarea class="contact-form-text" placeholder="Please type in your Message"></textarea>
-                <input type="submit" class="contact-form-btn" id="contactsubmit" style="background-color: goldenrod;"
-                    value="Submit">
->>>>>>> 6d7613fdab5a684c9b304961d86077f1bef2c0fa
-
+            <form class="contact-form">
+                <input type="text" class="contact-form-text" id="name" placeholder="Your Name" maxlength="64" required>
+                <input type="email" class="contact-form-text" id="email" placeholder="Your Email" maxlength="96"
+                    required><small id="emailHelp" class="form-text text-muted">We'll never share
+                    your email with
+                    anyone else.</small>
+                <input type="text" class="contact-form-text" id="phonenumber" placeholder="Your Phone Number">
+                <textarea class="contact-form-text" id="message" placeholder="Please type in your Message"></textarea>
+                <input type="submit" class="contact-form-btn" value="Submit">
             </form>
         </div>
+
+
+
+
+
+
+
 
 
 
