@@ -1,165 +1,284 @@
-/*---------- Header Section ---------*/
+ /* style.css */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
 
-.getbuddytxt {
-    text-align: left;
-    padding-left: 10%;
-    color: white;
+ html,
+ body {
+     font-family: 'Comic Neue', cursive;
+     /* footer css */
+     height: 100%;
+ }
 
+ /*---------- Header Section ---------*/
+ /* used in place of header */
+ .bg-cover {
+     /*  background-image: url('/images/dog.jpg'); */
+     height: 100vh;
+     background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.5)),
+         url('/images/dog.jpg') no-repeat center center/cover;
+ }
 
-}
+ #banner {
+     /* style.css */
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 80%;
+ }
 
-.petmetxt {
+ h1 {
+     color: goldenrod;
+     /* font-size: 2.5rem; */
+ }
 
-    text-align: left;
+ h3 {
+     color: goldenrod;
+     /* font-size: 2.5rem; */
+ }
+
+ .petmetxt {
+     /* Index.css file */
+     /* text-align: left;
     padding-left: 20%;
     font-size: 60px;
     padding-bottom: 5%;
-    color: beige;
+    color: beige; */
 
-    /* animation-name: slide;
-    animation-duration: 1s;  */
-
-}
-
-.searchform {
-    padding: 15px;
-}
-
-.page-holder {
-    min-height: 100vh;
-}
-
-/*----------End of Header Section ---------*/
-
-html,
-body,
-.bg-cover {
-    height: 100%;
-    background-image: url('/images/dog.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    font-family: 'Comic Neue', cursive;
-}
-
-@media (max-width: 740px) {
-
-    html,
-    body,
-    .bg-cover {
-        height: 100%;
-        background-image: url('/images/dog.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        font-family: 'Comic Neue', cursive;
-
-    }
-}
-
-@media (min-width: 800px) and (max-width: 850px) {
-
-    html,
-    body,
-    .bg-cover {
-        height: 1000px;
-        background-image: url('/images/dog.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        font-family: 'Comic Neue', cursive;
-
-    }
-}
-
-.navbar {
-    background: rgba(0, 0, 0, 0.6) !important;
-    font-family: 'Comic Neue', cursive;
-
-}
-
-@media (max-width: 991px) {
-    .navbar:not(.top-nav-collapse) {
-        background: rgba(0, 0, 0, 0.6) !important;
-    }
-}
-
-.navbar-toggler {
-    border: 1px solid white !important;
-}
-
-.navbar-toggler:hover {
-    border: 2px solid white !important;
-    opacity: 0.5;
-}
-
-.navbar-toggler-icon {
-    color: white !important;
-}
+     /* style.css */
+     animation-name: slide;
+     animation-duration: 1s;
 
 
-.rgba-gradient {
-    background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.342), rgba(144, 15, 15, 0.05) 100%);
-    background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
-}
+ }
 
-#nav-text {
-    color: white;
-    /*  background-image: url("/PetMe/Assets/Logos/PetMe\ Logo\ Long\ whtbkg.png"); */
-}
+ .getbuddytxt {
+     /* Index.css file */
+     /* text-align: left;
+    padding-left: 10%;
+    color: white; */
 
-#nav-text:active {
-    font-weight: bolder;
-    opacity: 0.5;
-}
+     /* style.css */
+     animation-name: slide;
+     animation-duration: 1s;
+     animation-delay: 2s;
+     animation-fill-mode: backwards;
+ }
 
-#nav-text:focus {
-    font-weight: bolder;
-    opacity: 0.5;
-}
+ /* style.css */
+ @keyframes slide {
+     0% {
+         transform: translateX(-1000px);
+         opacity: 0;
+     }
 
-#nav-text:hover {
-    font-weight: bolder;
-    opacity: 0.5;
-}
+     100% {
+         transform: translateX(0);
+         opacity: 1;
+     }
+ }
 
-/* Logo implementation section */
+ #searchRows {
+     /* style.css */
+     position: absolute;
+     top: 95%;
+     left: 15%;
+ }
+
+ .searchform {
+     padding: 15px;
+ }
+
+ .page-holder {
+     min-height: 100vh;
+ }
+
+ /*----------End of Header Section ---------*/
+
+ /* html,
+ body
+
+ /*.bg-cover  */
+ /*  {
+     height: 100%;
+     background-image: url('/images/dog.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     font-family: 'Comic Neue', cursive;
+ } 
+
+ @media (max-width: 740px) {
+
+     html,
+     body
+
+     /*.bg-cover  /
+         {
+         height: 100%;
+         background-image: url('/images/dog.jpg');
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         font-family: 'Comic Neue', cursive;
+
+     }
+ }
+
+ @media (min-width: 800px) and (max-width: 850px) {
+
+     html,
+     body
+
+     /*.bg-cover  /
+         {
+         height: 1000px;
+         background-image: url('/images/dog.jpg');
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+         font-family: 'Comic Neue', cursive;
+
+     }
+ } */
+
+ .navbar {
+     background: rgba(42, 14, 87, 0.6) !important;
+     font-family: 'Comic Neue', cursive;
+
+ }
+
+ /* @media (max-width: 991px) {
+     .navbar:not(.top-nav-collapse) {
+         background: rgba(0, 0, 0, 0.6) !important;
+     }
+ } */
+
+ .navbar-toggler {
+     /* style.css */
+     color: gold !important;
+     outline: none !important;
+     /* border: 1px solid white !important; */
+ }
+
+ .navbar-toggler:hover {
+     border: 2px solid white !important;
+     opacity: 0.5;
+ }
+
+ .navbar-toggler-icon {
+     color: gold !important;
+ }
 
 
-/*a#nav-text.navbar-brand {
+ .rgba-gradient {
+     background: -webkit-linear-gradient(45deg, rgb(0, 0, 0), rgba(144, 15, 15, 0.05) 100%);
+     background: linear-gradient(to 45deg, rgba(0, 0, 0, 0.7), rgba(72, 15, 144, 0.4) 100%);
+ }
+
+ #nav-text {
+     color: rgb(108, 117, 21);
+     color: goldenrod;
+     /*  background-image: url("/PetMe/Assets/Logos/PetMe\ Logo\ Long\ whtbkg.png"); */
+ }
+
+ #nav-text:active {
+     font-weight: bolder;
+     opacity: 0.5;
+ }
+
+ #nav-text:focus {
+     font-weight: bolder;
+     opacity: 0.5;
+ }
+
+ #nav-text:hover {
+     font-weight: bolder;
+     opacity: 0.5;
+ }
+
+ /* Logo implementation section */
+
+
+ /*a#nav-text.navbar-brand {
     
     background-image: url("/PetMe/Assets/Logos/PetMe\ Logo\ Long\ whtbkg.png");
 } */
-/* ---End of Logo implementation section */
-#age,
-#petType,
-#milesrange {
-    width: 200px;
-    background-color: white;
-}
+ /* ---End of Logo implementation section */
+ #age,
+ #petType,
+ #milesrange {
+     width: 200px;
+     background-color: white;
+ }
 
-#age:hover,
-#petType:hover,
-#milesrange:hover {
-    width: 200px;
-    background-color: white;
-    border: 2px rgb(0, 140, 255) solid;
-}
+ #age:hover,
+ #petType:hover,
+ #milesrange:hover {
+     width: 200px;
+     background-color: white;
+     border: 2px rgb(0, 140, 255) solid;
+ }
 
-#age:focus,
-#petType:focus,
-#milesrange:focus {
-    width: 200px;
-    background-color: white;
-    border: 2px rgb(0, 255, 34) solid;
-}
+ #age:focus,
+ #petType:focus,
+ #milesrange:focus {
+     width: 200px;
+     background-color: white;
+     border: 2px rgb(0, 255, 34) solid;
+ }
 
-#breed:hover,
-#zipcode:hover {
-    border: 2px rgb(0, 140, 255) solid;
-}
+ #breed:hover,
+ #zipcode:hover {
+     border: 2px rgb(0, 140, 255) solid;
+ }
 
-#breed:focus,
-#zipcode:focus {
-    border: 2px rgb(0, 255, 34) solid;
-}
+ #breed:focus,
+ #zipcode:focus {
+     border: 2px rgb(0, 255, 34) solid;
+ }
+
+ /*----------Footer Section ---------*/
+ footer {
+     background: black;
+     padding-top: 2%;
+     margin-top: 15px;
+     position: relative;
+ }
+
+ .text-center h4 {
+     color: #dbc1ac;
+
+ }
+
+ footer span {
+     padding: 0.3em 0.7em;
+     color: #dbc1ac;
+     transition: all .5s ease;
+ }
+
+ footer p {
+     color: #dbc1ac;
+     font-size: 10px;
+ }
+
+ footer .top a {
+     color: goldenrod;
+     font-size: 15px;
+
+     /* .footer .footer-bottom comencement     position: absolute;*/
+     bottom: 0px;
+     left: 0px;
+     text-align: center;
+     height: 50px;
+     background: #343a40;
+     padding-top: 30px;
+     width: 100%;
+
+
+ }
+
+ /*----------End of Footer Section ---------*/

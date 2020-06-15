@@ -24,5 +24,23 @@ exports.postLoginPage = (req, res, next) => {
         if (customerMatch.length === 1) {
             res.redirect('/');
         }
+        else {
+            db.Admin.findAll({
+                where: {
+                    email: userEmail,
+                    password: userPw
+                }
+            }).then(function (adminMatch) {
+                if (adminMatch.length === 1) {
+                    res.render('listpet', {
+                        title: 'Register Pet',
+                        css: ['index.css'],
+                        js:['registernewpet.js', 'dropdownitems.js'],
+                        adminId: adminMatch[0].id
+                    });
+                }
+            });
+        }
+
     });
 };

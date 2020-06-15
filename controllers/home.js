@@ -5,7 +5,8 @@ const axios = require('axios');
 exports.getDefaultPage = (req, res, next) => {
     res.render('index', {
         title: 'PetMe | Home',
-        css: ['index.css']
+        css: ['index.css'],
+        js: ['dropdownitems.js']
     });
 };
 

@@ -4,7 +4,7 @@ const path = require('path');
 
 const express = require('express');
 
-const registerPetController = require('../controllers/registerpet.js');
+const registerPetController = require('../controllers/registerpet');
 
 const router = express.Router();
 
