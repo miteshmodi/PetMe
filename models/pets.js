@@ -17,7 +17,7 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         pet_name: DataTypes.STRING,
-        image: DataTypes.BLOB('long'),
+        image: DataTypes.STRING,
         adopted: {
             type: DataTypes.BOOLEAN,
             allowNull: false,

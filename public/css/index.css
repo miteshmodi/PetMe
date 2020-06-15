@@ -21,7 +21,7 @@
 
 }
 
-.searchform {
+.searchform .newpetform {
     padding: 15px;
 }
 
@@ -162,4 +162,9 @@ body,
 #breed:focus,
 #zipcode:focus {
     border: 2px rgb(0, 255, 34) solid;
+}
+
+#upload {
+    border-radius: 5px;
+    padding: 5px;
 }
