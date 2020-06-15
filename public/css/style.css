@@ -337,10 +337,12 @@ textarea.contact-form-text {
 /*----------End of  Contact Us Section ---------*/
 
 
-/*-------- Login Section ---------- */
+/*-------- Login, Signup Section ---------- */
 html,
-body,
-.login-section {
+body
+
+/* .login-section */
+    {
     height: 100%;
     background-image: url("/images/pet-rabbit-on-green-grass-P5EQ5GR.jpg");
     background-repeat: no-repeat;
@@ -483,6 +485,99 @@ h1 {
 
 /*-------- End of Login Section ----------*/
 
+/*----------Testimonial Section ---------*/
+.mostliked {
+    position: relative;
+    margin-top: 25px;
+}
+
+/* .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    /*opacity: .8; */
+/*} */
+
+.bg-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+.testimon-card {
+    position: relative;
+    box-shadow: 5px 15px 50px #634832;
+    transition: all .8s;
+    max-width: 420px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-header .title-text {
+    color: black;
+}
+
+.rotate {
+    perspective: 100rem;
+}
+
+.back {
+    top: -100%;
+    background: white;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transition: top .8s opacity .4s;
+    position: absolute;
+}
+
+.text-color {
+    color: white;
+
+}
+
+.back-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.rotate:hover .testimon-card {
+
+    transform: rotateY(180deg);
+
+}
+
+.rotate:hover .back {
+    opacity: 1;
+    user-select: auto;
+    pointer-events: auto;
+    top: 0;
+}
+
+.back-content .btn {
+    color: goldenrod;
+}
+
+
+
+
+
+/*----------End of Testimonial Section ---------*/
+
+
+
+
 
 
 
@@ -523,7 +618,7 @@ footer .top a {
     left: 0px;
     text-align: center;
     height: 50px;
-    background: #343a40;
+    background: black;
     padding-top: 30px;
     width: 100%;
 
