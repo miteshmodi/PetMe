@@ -16,15 +16,15 @@ $(document).ready(function () {
             return;
         }
 
-        $.post("/login", user)
-            .then(getHomePage);
+        $.post("/loginadmin", user)
+            .then(getListPets);
         $email.val("");
         $pw.val("");
     }
 
-    function getHomePage() {
-        $.get("/", function () {
-            window.location.replace("/");
+    function getListPets() {
+        $.get("/listpet", function () {
+            window.location.replace("/listpet");
         })
             .catch(function (err) {
                 console.log(err);
