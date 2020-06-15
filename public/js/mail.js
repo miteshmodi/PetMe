@@ -34,6 +34,9 @@ const sendMail = (data, cb) => {
             //   console.log("Found Error");
             cb(err, null);
         } else {
+            //  res.render("contact", {
+            //  msg: "Email has been sent"
+
             //  console.log("Message sent!!!");
             cb(null, data);
 
