@@ -1,9 +1,9 @@
 <div class="row">
-    <form class="newpetform" id="registerNewPet">
+    <form action="/listpet" class="newpetform" id="registerNewPet" method="POST" enctype="multipart/form-data">
         <div class="form-row">
-            <div class="form-group input-group input-group-lg col-lg-4">
+            {{!-- <div class="form-group input-group input-group-lg col-lg-4">
                 <div class="dropdown">
-                    <button class="btn btn-lg btn-default dropdown-toggle" type="button" id="age" data-toggle="dropdown"
+                    <button class="btn btn-lg btn-default dropdown-toggle" type="button" id="age" name="age" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Age
                     </button>
@@ -14,13 +14,18 @@
                         <a class="dropdown-item" value="old">Old</a>
                     </div>
                 </div>
+            </div> --}}
+            <div class="form-group input-group input-group-lg col-lg-6">
+                <input type="text" class="form-control" placeholder="Age (Baby, Young, Adult, Old)" id="age" name="age">
             </div>
 
             <div class="col-lg-4"></div>
-
-            <div class="form-group input-group input-group-lg col-lg-4">
+            <div class="form-group input-group input-group-lg col-lg-6">
+                <input type="text" class="form-control" placeholder="Pet Type (Dog, Cat, Bird)" id="petType" name="pet_type">
+            </div>
+            {{!-- <div class="form-group input-group input-group-lg col-lg-4">
                 <div class="dropdown">
-                    <button class="btn btn-lg btn-default dropdown-toggle" type="button" id="petType"
+                    <button class="btn btn-lg btn-default dropdown-toggle" type="button" id="petType" name="petType"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Pet Type
                     </button>
@@ -30,24 +35,24 @@
                         <a class="dropdown-item" value="bird">Bird</a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
 
         <div class="form-row">
             <div class="form-group input-group input-group-lg col-lg-6">
-                <input type="text" class="form-control" placeholder="Breed" id="breed">
+                <input type="text" class="form-control" placeholder="Breed" id="breed" name="breed">
             </div>
 
             <div class="form-group input-group input-group-lg col-lg-6">
-                <input type="text" class="form-control" placeholder="Pet Name" id="petname">
+                <input type="text" class="form-control" placeholder="Pet Name" id="petname" name="pet_name">
             </div>
 
             <div class="form-group input-group input-group-lg col-lg-6">
-                <input type="number" class="form-control" placeholder="Zip" id="zipcode">
+                <input type="text" class="form-control" placeholder="Zip" id="zipcode" name="zip_code">
             </div>
 
             <div class="form-group input-group input-group-lg col-lg-6">
-                <input type="file" class="form-control font-weight-light text-muted" id="upload">
+                <input type="file" class="form-control font-weight-light text-muted" id="image" name="image">
             </div>
         </div>
 
