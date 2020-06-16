@@ -3,6 +3,39 @@
 
 <head>
 	<title>{{title}}</title>
+	 <style>
+    /**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+    .StripeElement {
+      box-sizing: border-box;
+      width: 30%;
+      height: 40px;
+
+      padding: 10px 12px;
+
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background-color: white;
+
+      box-shadow: 0 1px 3px 0 #e6ebf1;
+      -webkit-transition: box-shadow 150ms ease;
+      transition: box-shadow 150ms ease;
+    }
+
+    .StripeElement--focus {
+      box-shadow: 0 1px 3px 0 #cfd7df;
+    }
+
+    .StripeElement--invalid {
+      border-color: #fa755a;
+    }
+
+    .StripeElement--webkit-autofill {
+      background-color: #fefde5 !important;
+    }
+  </style>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -23,7 +56,77 @@
 <body>
 
 	{{{body}}}
+  <div id="donateStart"></div>
+  <div id="donate"></div>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script>
+    $('#btn').on('click', function () {
+      // Fire a request to get a template
+      $.get('http://localhost:8080/donation', function (view) {
+        $('#donateStart').html(view)
+      });
+    })
 
+// $('#btn').on('click', function () {
+      // Fire a request to get a template
+  //    $.get('http://localhost:8080/card', function (view) {
+    ///    $('#card').html(view)
+      //});
+    //})
+
+    $('#form').submit(function (e) {
+      e.preventDefault()
+      const name = $('#name').val();
+      const email = $('#email').val();
+      const amount = $('#amount').val();
+
+      const form = {
+        name,
+        email,
+        amount
+      }
+	  then.
+
+      $.post('http://localhost:8080/form', form)
+        .done(function (view) {
+          $('#donate').html(view);
+          const stripe = Stripe('STRIPE_SECRET_KEY');
+          const elements = stripe.elements();
+          const card = elements.create('card');
+          card.mount('#card-element');
+
+          const cardholderName = document.getElementById('cardholder-name');
+          const cardButton = document.getElementById('card-button');
+          const clientSecret = cardButton.dataset.secret;
+
+          cardButton.addEventListener('click', async (event) => {
+            event.preventDefault();
+            try {
+              const result = await stripe.confirmCardPayment(clientSecret, {
+                payment_method: {
+                  card: card,
+                  billing_details: { name: cardholderName.value },
+                }
+              });
+              if (result.error) {
+                document.getElementById('card-errors').textContent = result.error.message;
+                return false;
+              } else {
+                document.getElementById('card').submit();
+              }
+            } catch (err) {
+              document.getElementById('card-errors').textContent = err.message;
+              return false;
+            }
+          });
+        });
+
+
+    })
+
+
+  </script>
 	<!-- JS, Popper.js, and jQuery -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
 		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

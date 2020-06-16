@@ -50,7 +50,7 @@ var adminregroute = require("./routes/registeradmin-route.js");
 var signuproute = require("./routes/signup-route.js");
 var listpet = require("./routes/registerpet-route.js");
 var logadminroute = require("./routes/loginadmin-route.js");
-
+var donateStart = require("./routes/Donate-route.js");
 
 app.use(routes);
 app.use(aboutRoutes, router);
@@ -60,6 +60,53 @@ app.use(adminregroute);
 app.use(signuproute);
 app.use(listpet, router);
 app.use(logadminroute);
+
+
+app.get('/donateStart', function (req, res) {
+  res.render('donateStart');
+});
+
+app.get('/donation', function (req, res) {
+  res.render('donation');
+});
+
+app.get('/card', function (req, res) {
+  res.render('card');
+});
+
+app.get('/thanks', async (req, ) => {
+  res.render('thanks');
+});
+
+app.post('/form', async (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const amount = req.body.amount;
+
+  if (!amount) {
+    // Data is valid!
+    try {
+      // Create a PI:
+      const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+      const paymentIntent = await stripe.paymentIntents.create({
+        amount: amount * 100, // In cents
+        currency: 'usd',
+        receipt_email: email,
+      });
+      res.send({ success: true });
+      res.render('card', {
+        name: name,
+        amount: amount,
+        intentSecret: paymentIntent.client_secret,
+      });
+    } catch (err) {
+      console.log('Error! ', err.message);
+    }
+  } else {
+    res.send({ success: false });
+    // res.render('error', { title: 'Donate', errors: 'something went wrong' });
+  }
+});
 
 
 // app.get("/contact", (req, res) => {
