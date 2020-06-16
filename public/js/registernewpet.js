@@ -14,31 +14,35 @@ $(document).ready(function () {
         
         
         // console.log(fileToUpload);
-        // console.log(event.target[5].files[0]);
-        // const formData = new FormData();
-        // formData.append('file' , event.target[5].files[0], event.target[5].files[0].name);
+        console.log(event.target[5].files[0]);
+        const formData = new FormData();
+        formData.append('age', $age[0].textContent);
+        formData.append('pet_type', $petType[0].textContent);
+        formData.append('AdminId', $petType[0].textContent);
+        formData.append('adopted', false);
+        formData.append('file' , event.target[5].files[0], event.target[5].files[0].name);
 
-        var insertPet = {
-            age: $age[0].textContent,
-            pet_type: $petType[0].textContent,
-            pet_name: $petname.val().trim(),
-            zip_code: $zipcode.val().trim(),
-            breed: $breed.val().trim(),
-            adopted: false,
-            AdminId: 1,
-            image: ''
-        };
-        console.log(insertPet);
-        $.post("/listpet", insertPet).then(getAllPetAPi);
+        // var insertPet = {
+        //     age: $age[0].textContent,
+        //     pet_type: $petType[0].textContent,
+        //     pet_name: $petname.val().trim(),
+        //     zip_code: $zipcode.val().trim(),
+        //     breed: $breed.val().trim(),
+        //     adopted: false,
+        //     AdminId: 1,
+        //     image: ''
+        // };
+        // console.log(insertPet);
+        // $.post("/listpet", insertPet).then(getAllPetAPi);
 
-        // $.ajax({
-        //     type: "POST",
-        //     enctype: "multipart/form-data",
-        //     url: "/listpet",
-        //     data: insertPet,
-        //     processData: false,
-        //     contentType: false
-        //   });
+        $.ajax({
+            type: "POST",
+            enctype: "multipart/form-data",
+            url: "/listpet",
+            data: formData,
+            processData: false,
+            contentType: false
+          });
     
         $zipcode.val("");
         $breed.val("");
