@@ -6,10 +6,10 @@
     <div class="wrapper mask rgba-gradient align-items-center" style="height: 550px">
         <h1><img src="../images/favicon.ico" alt="" class="navbar-brand" id="nav-text" href="/"> Sign Up </h1>
         <form id="signupform">
-            <input type="text" placeholder="First Name" id="firstname">
-            <input type="text" placeholder="Last Name" id="lastname">
-            <input type="email" placeholder="Email" id="signupemail">
-            <input type="password" placeholder="Password" id="signuppassword">
+            <input type="text" placeholder="First Name" id="firstname" maxlength="64" required>
+            <input type="text" placeholder="Last Name" id="lastname" maxlength="64" required>
+            <input type="email" placeholder="Email" id="signupemail" maxlength="96" required>
+            <input type="password" placeholder="Password" id="signuppassword" maxlength="32" required>
             <button class="btn-lg btn-warning" type="submit">Sign up</button>
         </form>
         

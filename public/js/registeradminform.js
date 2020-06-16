@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    
+$(document).ready(function () {
+
     var $firstName = $("#firstName");
     var $lastName = $("#lastName");
     var $roleAdmin = $("#roleAdmin");
@@ -19,8 +19,25 @@ $(document).ready(function() {
             password: $password.val().trim()
         };
 
+        // Validates that all fields are filled in
+        if (!insertAdmin.first_name || !insertAdmin.last_name || !insertAdmin.role || !insertAdmin.email || !insertAdmin.password) {
+            alert("All fields are required.");
+            return;
+        }
+        // Validates that email address is in correct format
+        var pattEmailAdr = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!pattEmailAdr.test(insertAdmin.email)) {
+            alert("Please enter a valid email address");
+            return;
+        }
+        // Validates that password is at least 8 characters
+        if (insertAdmin.password.length < 8) {
+            alert("Password must be at least 8 characters.");
+            return;
+        }
+
         $.post("/registeradmin", insertAdmin)
-        .then(getLoginPage);
+            .then(getLoginPage);
         $firstName.val("");
         $lastName.val("");
         $roleAdmin.val("");
@@ -29,11 +46,11 @@ $(document).ready(function() {
     }
 
     function getLoginPage() {
-        $.get("/login", function(){
+        $.get("/login", function () {
             window.location.replace("/login");
         })
-        .catch(function(err) {
-            console.log(err);
-        });
-      }
+            .catch(function (err) {
+                console.log(err);
+            });
+    }
 });
