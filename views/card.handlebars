@@ -1,0 +1,17 @@
+<h1>Complete your donation</h1>
+<p>Thank you, {{name}}, for your generosity! Please enter your payment details below to complete your donation.
+</p>
+<form method="get" action="http://localhost:8080/thanks" id="card">
+  <div>
+    <label for="cardholder-name">Cardholder name: </label>
+    <input id="cardholder-name" type="text" name="cardholder-name" value="{{name}}">
+  </div>
+  <div>
+    <label for="card-element">Credit or debit card:</label>
+    <div id="card-element"></div>
+  </div>
+  <div id="card-errors"></div>
+  <div>
+    <button id="card-button" data-secret="{{intentSecret}}">Donate ${{amount}}</button>
+  </div>
+</form>

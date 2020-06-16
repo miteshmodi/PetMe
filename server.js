@@ -4,33 +4,8 @@ var exphbs = require("express-handlebars");
 var router = express.Router();
 var db = require("./models");
 const path = require("path");
-// const fs = require("fs");
 const bodyParser = require("body-parser");
 const sendMail = require("./public/js/mail");
-// const multer = require("multer");
-
-// const data = require("./public/submitcontact");
-// const fileFilter = (req, file, cb) => {
-//   if (
-//     file.mimetype === 'image/png' ||
-//     file.mimetype === 'image/jpg' ||
-//     file.mimetype === 'image/jpeg' ||
-//     file.mimetype === 'image/JPG'
-//   ) {
-//     cb(null, true);
-//   } else {
-//     cb(null, false);
-//   }
-// };
-
-// const fileStorage = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//     cb(null, 'images');
-//   },
-//   filename: (req, file, cb) => {
-//     cb(null, new Date().toISOString() + '-' + file.originalname);
-//   }
-// });
 
 const nodemailer = require("nodemailer");
 
@@ -52,7 +27,7 @@ var adminregroute = require("./routes/registeradmin-route.js");
 var signuproute = require("./routes/signup-route.js");
 var listpet = require("./routes/registerpet-route.js");
 var logadminroute = require("./routes/loginadmin-route.js");
-
+var donateStart = require("./routes/Donate-route.js");
 
 // Sets up the Express app to handle data parsing
 // app.use(bodyParser.json());
@@ -88,6 +63,55 @@ app.use(signuproute);
 app.use(listpet);
 app.use(logadminroute);
 
+app.get('/donateStart', function (req, res) {
+  res.render('donateStart');
+});
+
+app.get('/donation', function (req, res) {
+  res.render('donation');
+});
+
+app.get('/card', function (req, res) {
+  res.render('card');
+});
+
+app.get('/thanks', async (req, ) => {
+  res.render('thanks');
+});
+
+app.post('/form', async (req, res) => {
+  const name = req.body.name;
+  const email = req.body.email;
+  const amount = req.body.amount;
+
+  if (!amount) {
+    // Data is valid!
+    try {
+      // Create a PI:
+      const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+      const paymentIntent = await stripe.paymentIntents.create({
+        amount: amount * 100, // In cents
+        currency: 'usd',
+        receipt_email: email,
+      });
+      res.send({ success: true });
+      res.render('card', {
+        name: name,
+        amount: amount,
+        intentSecret: paymentIntent.client_secret,
+      });
+    } catch (err) {
+      console.log('Error! ', err.message);
+    }
+  } else {
+    res.send({ success: false });
+    // res.render('error', { title: 'Donate', errors: 'something went wrong' });
+  }
+});
+
+// app.get("/contact", (req, res) => {
+//   res.render("contactuspage");
+// });
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
