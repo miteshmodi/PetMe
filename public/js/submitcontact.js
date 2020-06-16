@@ -9,11 +9,12 @@ $(".contact-form-btn").on("click", (e) => {
     const message = $("#message").val();
     const patt = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const patt2 = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-
+    
+    // Validate that name and email address are filled in
     if (name.length === 0 || email.length === 0) {
         alert("you must enter a name and email.");
     }
-        
+    // Validate that email is in the correct format    
     if (patt.test(email) && patt2.test(phonenumber)) {
         return true;
     } else {
