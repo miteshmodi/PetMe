@@ -10,4 +10,8 @@ router.get('/', homepageController.getDefaultPage);
 
 router.put('/geolocation', homepageController.getZipCode);
 
+router.post('/', homepageController.postDefaultPage);
+
+router.put('/', homepageController.putDefaultPage);
+
 module.exports = router;

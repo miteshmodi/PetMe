@@ -1,19 +1,14 @@
 <div class="page-holder bg-cover">
   <div class="mask rgba-gradient align-items-center">
-    {{!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a> --}}
 
     {{> navigationbar}}
     <div class="container" id="banner">
       <h1 class="petmetxt font-weight-bold display-4 text-center  heading">Pet Me</h1>
       <h3 class="getbuddytxt text-center">Looking to Get a Buddy?</h3>
       {{> searchpetform}}
+      <div class="mt-5" style="padding-top: 380px;">
+        {{> displaypet}}
+      </div>
     </div>
   </div>
 </div>

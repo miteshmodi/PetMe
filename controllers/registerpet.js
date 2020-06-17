@@ -27,7 +27,8 @@ exports.getPetSearchResults = (req, res, next) => {
 };
 
 exports.postListPet = (req, res, next) => {
-    req.body.image = req.protocol + '://' + req.get('host') + '/uploads/' + req.file.filename;
+    // req.body.image = req.protocol + '://' + req.get('host') + '/uploads/' + req.file.filename;
+    req.body.image = req.file.filename;
     req.body.AdminId = 1;
     console.log(req.body);
     db.Pets.create(req.body).then(function (dbPost) {

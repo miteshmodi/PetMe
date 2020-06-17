@@ -1,0 +1,22 @@
+{{!-- <h3 class="petmetxt d-none" id="searchresult">Search Result</h3> --}}
+<div class="row">
+    {{#each pets}}
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6 col-md-6 col-lg-4 mt-3">
+        <div class="card" style="width: 18rem;">
+            <img src='uploads/{{this.dataValues.image}}' class="card-img-top" alt="image caption">
+            <div class="card-body">
+                <p class="card-text"><strong>{{this.dataValues.pet_name}}</strong></p>
+                <hr>
+                <p class="card-text"><strong>Age:</strong> {{this.dataValues.age}} <br>
+                    <strong>Breed: </strong>{{this.dataValues.breed}}
+                    <br>
+                    <strong>Zipcode:</strong>{{this.dataValues.zip_code}}</p>
+                <p class="card-text">Maiores vitae possimus illo illum aliquid obcaecati ipsa. Illum rem eius eum
+                    corrupti perferendis placeat nulla iste voluptatum esse fugiat, reiciendis odit!</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-3"></div>
+    {{/each}}
+</div>
