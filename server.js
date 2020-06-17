@@ -94,7 +94,9 @@ app.post('/form', async (req, res) => {
         currency: 'usd',
         receipt_email: email,
       });
-      res.send({ success: true });
+      res.send({
+        success: true
+      });
       res.render('card', {
         name: name,
         amount: amount,
@@ -104,7 +106,9 @@ app.post('/form', async (req, res) => {
       console.log('Error! ', err.message);
     }
   } else {
-    res.send({ success: false });
+    res.send({
+      success: false
+    });
     // res.render('error', { title: 'Donate', errors: 'something went wrong' });
   }
 });

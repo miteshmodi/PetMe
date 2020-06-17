@@ -5,7 +5,7 @@ exports.getContactPage = (req, res, next) => {
         title: 'Contact Us',
         css: ['index.css', 'style.css'],
         js: ["submitcontact.js", "mail.js"],
-        apiKey: process.env.SANDBOXAPI_KEY,
+        api_key: process.env.MAILGUNAPI_KEY,
         domain: process.env.SANDBOXDOM_NAME
     });
 };
