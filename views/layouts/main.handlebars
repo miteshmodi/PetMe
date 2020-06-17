@@ -81,7 +81,7 @@
       }      
       $.post('http://localhost:8080/donateForm', donateForm)
         .done(function (view) {
-          $('#card').html(view);
+          $('#donate').html(view);
         const stripe = Stripe('pk_test_51GsdgsG1LfhiyqPCRpEnkx744VjmGjlnmRHp1bQ8RzNWPYy7Iz1uo5kZK7eZ12uCi8BKniW6czXXT72pSEmfitnm00Q6VSQhrr');
           const elements = stripe.elements();
           const card = elements.create('card');
