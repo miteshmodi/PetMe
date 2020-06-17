@@ -33,3 +33,9 @@ This application should also help users that are going through depression, lonel
 Stack overflow: https://stackoverflow.com/ w3schools.com: https://www.w3schools.com/ freeCodeCamp: https://www.freecodecamp.org/ MDN web docs moz://a: https://developer.mozilla.org/en-US/
 
 ## APIs:
+Geocoding
+AdoptaPet / Petfinder.com
+Stripe
+Mailgun
+Stripe
+Dialogflow
