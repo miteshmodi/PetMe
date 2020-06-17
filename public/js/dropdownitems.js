@@ -18,6 +18,12 @@ $(document).ready(function () {
         selectOption("#milesrange");
     });
 
+    $("#milesinrange").click(function (event) {
+        // event.preventDefault();
+       
+        selectOption("#milesinrange");
+    });
+
     function selectOption(id) {
         $('.dropdown-item').click(function(event) {
             event.preventDefault();
