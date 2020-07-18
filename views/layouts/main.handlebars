@@ -68,30 +68,21 @@
       });
     })
 
-// $('#btn').on('click', function () {
-      // Fire a request to get a template
-  //    $.get('http://localhost:8080/card', function (view) {
-    ///    $('#card').html(view)
-      //});
-    //})
-
-    $('#form').submit(function (e) {
-      e.preventDefault()
+    $('#donateForm').submit(function (event) {
+      event.preventDefault()
       const name = $('#name').val();
       const email = $('#email').val();
       const amount = $('#amount').val();
 
-      const form = {
+      const donateForm = {
         name,
         email,
         amount
-      }
-	  then.
-
-      $.post('http://localhost:8080/form', form)
+      }      
+      $.post('http://localhost:8080/donateForm', donateForm)
         .done(function (view) {
           $('#donate').html(view);
-          const stripe = Stripe('STRIPE_SECRET_KEY');
+        const stripe = Stripe('pk_test_51GsdgsG1LfhiyqPCRpEnkx744VjmGjlnmRHp1bQ8RzNWPYy7Iz1uo5kZK7eZ12uCi8BKniW6czXXT72pSEmfitnm00Q6VSQhrr');
           const elements = stripe.elements();
           const card = elements.create('card');
           card.mount('#card-element');

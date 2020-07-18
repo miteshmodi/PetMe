@@ -6,6 +6,10 @@ var db = require("./models");
 const path = require("path");
 const bodyParser = require("body-parser");
 const sendMail = require("./public/js/mail");
+const stripe = require("stripe")
+// const data = require("./public/submitcontact");
+
+
 
 const nodemailer = require("nodemailer");
 
@@ -71,20 +75,16 @@ app.get('/donation', function (req, res) {
   res.render('donation');
 });
 
-app.get('/card', function (req, res) {
-  res.render('card');
-});
-
-app.get('/thanks', async (req, ) => {
+app.get('/thanks', async (req, res) => {
   res.render('thanks');
 });
 
-app.post('/form', async (req, res) => {
+app.post('/donateForm', async (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const amount = req.body.amount;
 
-  if (!amount) {
+  if (amount && email && name) {
     // Data is valid!
     try {
       // Create a PI:
@@ -94,9 +94,7 @@ app.post('/form', async (req, res) => {
         currency: 'usd',
         receipt_email: email,
       });
-      res.send({
-        success: true
-      });
+      // res.send({ success: true });
       res.render('card', {
         name: name,
         amount: amount,
@@ -106,10 +104,8 @@ app.post('/form', async (req, res) => {
       console.log('Error! ', err.message);
     }
   } else {
-    res.send({
-      success: false
-    });
-    // res.render('error', { title: 'Donate', errors: 'something went wrong' });
+    // res.send({ success: false });
+    res.render('error', { title: 'Donate', errors });
   }
 });
 
